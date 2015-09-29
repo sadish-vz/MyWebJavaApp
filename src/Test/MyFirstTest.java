@@ -2,7 +2,7 @@ package Test;
 
 import static org.junit.Assert.*;
 
-import com.sk.pak.MyCl;
+import itsfor.testing.ForTesting;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +15,7 @@ public class MyFirstTest {
 
 	@Test
 	public void test() {
-		MyCl obj = new MyCl();
+		ForTesting obj = new ForTesting();
 		String str = obj.sayHello();
 		assertEquals("Hello World",str);
 	}

@@ -34,9 +34,7 @@
         <pathelement location="../../Downloads/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/tomcat7-websocket.jar"/>
         <pathelement location="../../Downloads/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/websocket-api.jar"/>
     </path>
-    <path id="Web App Libraries.libraryclasspath">
-        <pathelement location="WebContent/WEB-INF/lib/MyClassProjj.jar"/>
-    </path>
+    <path id="Web App Libraries.libraryclasspath"/>
     <path id="EAR Libraries.libraryclasspath"/>
     <path id="JUnit 4.libraryclasspath">
         <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
