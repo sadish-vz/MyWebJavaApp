@@ -79,10 +79,10 @@
     </target>
     <target depends="clean" name="cleanall"/>
 	<target name="compile" depends="clean,init">
-	    <javac srcdir="${src}" destdir="${build}/main"  executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes">
+	    <javac srcdir="${src}" destdir="${build}/main" includeantruntime="false"  executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes">
 	    	<classpath refid="MyWebJavaApp.classpath"/>
 	    		    </javac>
-	    <javac srcdir="${test.src.dir}" destdir="${build}/test"  executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes">
+	    <javac srcdir="${test.src.dir}" destdir="${build}/test" includeantruntime="false"  executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes">
 	    	<classpath refid="MyWebJavaApp.classpath"/>
 	    </javac>
 	  </target>
