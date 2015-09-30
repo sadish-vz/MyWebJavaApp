@@ -55,13 +55,13 @@
 	    <mkdir dir="${main.build.dir}"/>
 	    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
 	      <classpath refid="classpath.base"/>
+	      <classpath refid="MyWebJavaApp.classpath"/>
 	    </javac>
 	  </target>
 
 	  <target name="build" depends="compile">
 	    <mkdir dir="${test.build.dir}"/>
 	    <javac srcdir="${test.src.dir}" destdir="${test.build.dir}" includeantruntime="false">
-	    	<classpath refid="MyWebJavaApp.classpath"/>
 	        <classpath refid="classpath.test"/>
 	    </javac>
 	    <echo message="Build done" />
