@@ -1,0 +1,6 @@
+applications:
+- name: mywebjavaapp
+  memory: 512M
+  instances: 1
+  host: mywebjavaapp-${random-word}
+  path: bin/*.war
