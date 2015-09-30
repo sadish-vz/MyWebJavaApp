@@ -59,7 +59,7 @@
 	    <pathelement location="${main.build.dir}"/>
 	    <path refid="classpath.base" />
 	  </path>
-              	<target name ="test" depends="run,clean"/>
+              	<target name ="test" depends="MyFirstTest,clean"/>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
@@ -75,6 +75,7 @@
     </target>
     <target name="clean">
         <delete dir="bin"/>
+    	<echo message="Clean Done" />
     </target>
     <target depends="clean" name="cleanall"/>
     <target depends="build-subprojects,build-project" name="build"/>
@@ -103,7 +104,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="test"/>
     </target>
-              	<target name="run" depends="build">
+              	<target name="MyFirstTest" depends="build">
               	    <junit printsummary="on" haltonfailure="yes">
               	        <classpath>
               	          <path refid="classpath.test" />
