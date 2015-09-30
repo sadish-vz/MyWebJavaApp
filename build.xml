@@ -11,6 +11,8 @@
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
+	<property name="test.build.dir" value="build/test" />
+	<property name="test.src.dir" value="test" />
     <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
         <pathelement location="../../Downloads/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/annotations-api.jar"/>
         <pathelement location="../../Downloads/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/catalina-ant.jar"/>
@@ -97,20 +99,15 @@
         <antcall target="test"/>
     </target>
     <target name="MyFirstTest" depends="build">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="helloWorld.MyFirstTest" todir="${junit.output.dir}"/>
-            <classpath refid="MyWebJavaApp.classpath"/>
+    	  <junit printsummary="on" haltonfailure="yes">
+            
+    	  	<classpath>
+    	  		          <path refid="MyWebJavaApp.classpath"/>
+    	  		 <pathelement location="${test.build.dir}"/>
+    	  			        </classpath>
+    	  	 <formatter type="brief" usefile="false" />
+    	  	<test name="helloWorld.MyFirstTest" todir="${test.src.dir}"/>
         </junit>
     	<echo message="Testing Done" />
-    </target>
-    <target name="junitreport">
-        <junitreport todir="${junit.output.dir}">
-            <fileset dir="${junit.output.dir}">
-                <include name="TEST-*.xml"/>
-            </fileset>
-            <report format="frames" todir="${junit.output.dir}"/>
-        </junitreport>
     </target>
 </project>
