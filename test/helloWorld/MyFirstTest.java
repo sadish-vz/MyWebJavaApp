@@ -12,7 +12,7 @@ public class MyFirstTest {
 	public void test() {
 		/*ForTesting obj = new ForTesting();
 		String str = obj.sayHello();*/
-		assertEquals("Hello World","Hello World");
+		assertEquals("Hello Wold","Hello World");
 	}
 
 }
