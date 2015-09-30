@@ -10,9 +10,9 @@ public class MyFirstTest {
 
 	@Test
 	public void test() {
-		ForTesting obj = new ForTesting();
-		String str = obj.sayHello();
-		assertEquals("Hello World",str);
+		//ForTesting obj = new ForTesting();
+		//String str = obj.sayHello();
+		assertEquals("Hello World","Hello World");
 	}
 
 }
