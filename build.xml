@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
 <project basedir="." default="test" name="MyWebJavaApp">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../Desktop/eclipse-jee-kepler-SR2-win32-x86_64/eclipse"/>
@@ -9,8 +13,6 @@
     <property name="source" value="1.7"/>
 	<property name="test.build.dir" value="build/test" />
 	<property name="test.src.dir" value="test" />
-	<property name="build" value="build" />
-	<property name="src" value="src" />
 	<property name="web.dir" value="${basedir}/WebContent/WEB-INF" />
 	
     <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
@@ -55,11 +57,9 @@
         <path refid="lib/servlet-api.jar.libraryclasspath"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
-	<target name="test" depends="clean,MyFirstTest" />
+	<target name="test" depends="MyFirstTest" />
     <target name="init">
         <mkdir dir="bin"/>
-    	<!--<mkdir dir="${build}/main"/>
-    	<mkdir dir="${build}/test"/>-->
     	<mkdir dir="target"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
@@ -74,18 +74,8 @@
     </target>
     <target name="clean">
         <delete dir="bin"/>
-    	<!--<delete dir="${build}/main"/>
-		<delete dir="${build}/test"/>-->
     </target>
     <target depends="clean" name="cleanall"/>
-	<!--<target name="compile" depends="clean,init">
-	    <javac srcdir="${src}" destdir="${build}/main" includeantruntime="false">
-	    	<classpath refid="MyWebJavaApp.classpath"/>
-	    		    </javac>
-	    <javac srcdir="${test.src.dir}" destdir="${build}/test" includeantruntime="false"  >
-	    	<classpath refid="MyWebJavaApp.classpath"/>
-	    </javac>
-	  </target>-->
     <target depends="build-subprojects,build-project,buildwar" name="build"/>
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
@@ -144,3 +134,4 @@
 	</war>
 	</target>
 </project>
+
