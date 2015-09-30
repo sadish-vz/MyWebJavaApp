@@ -11,7 +11,7 @@ addons:
     project:
       name: "sadish-vz/MyWebJavaApp"
     notification_email: sadishkumar.x.neelamegam@verizon.com
-    build_command_prepend: "./configure"
-    build_command:   "make"
+    build_command_prepend: "mvn clean"
+    build_command:   "mvn -DskipTests=true compile"
     branch_pattern: master
 
