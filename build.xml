@@ -58,8 +58,8 @@
 	<target name="test" depends="clean,MyFirstTest" />
     <target name="init">
         <mkdir dir="bin"/>
-    	<mkdir dir="${build}/main"/>
-    	<mkdir dir="${build}/test"/>
+    	<!--<mkdir dir="${build}/main"/>
+    	<mkdir dir="${build}/test"/>-->
     	<mkdir dir="target"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
@@ -74,23 +74,23 @@
     </target>
     <target name="clean">
         <delete dir="bin"/>
-    	<delete dir="${build}/main"/>
-		<delete dir="${build}/test"/>
+    	<!--<delete dir="${build}/main"/>
+		<delete dir="${build}/test"/>-->
     </target>
     <target depends="clean" name="cleanall"/>
-	<target name="compile" depends="clean,init">
+	<!--<target name="compile" depends="clean,init">
 	    <javac srcdir="${src}" destdir="${build}/main" includeantruntime="false">
 	    	<classpath refid="MyWebJavaApp.classpath"/>
 	    		    </javac>
-	    <javac srcdir="${test.src.dir}" destdir="${build}/test" includeantruntime="false">
+	    <javac srcdir="${test.src.dir}" destdir="${build}/test" includeantruntime="false"  >
 	    	<classpath refid="MyWebJavaApp.classpath"/>
 	    </javac>
-	  </target>
+	  </target>-->
     <target depends="build-subprojects,build-project,buildwar" name="build"/>
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes" target="${target}">
             <src path="src"/>
             <src path="test"/>
             <classpath refid="MyWebJavaApp.classpath"/>
