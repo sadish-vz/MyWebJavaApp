@@ -131,8 +131,6 @@
 		</fileset>-->
 		<classes dir = "bin"></classes>
 	   
-	   <!--<classes dir = "${build.dir}/web"/>-->
-	   
 	</war>
 	</target>
 </project>
