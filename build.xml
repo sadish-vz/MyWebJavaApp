@@ -86,6 +86,7 @@
             <src path="test"/>
             <classpath refid="MyWebJavaApp.classpath"/>
         </javac>
+    	<echo message="Build done" />
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
     <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
@@ -96,6 +97,7 @@
             <patternset includes="jdtCompilerAdapter.jar"/>
             <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
         </unzip>
+    	<echo message="init-eclipse-compiler done" />
     </target>
     <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
@@ -113,12 +115,4 @@
               	        </batchtest>
               	    </junit>
               	  </target>
-    <target name="junitreport">
-        <junitreport todir="${junit.output.dir}">
-            <fileset dir="${junit.output.dir}">
-                <include name="TEST-*.xml"/>
-            </fileset>
-            <report format="frames" todir="${junit.output.dir}"/>
-        </junitreport>
-    </target>
 </project>
