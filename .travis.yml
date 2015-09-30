@@ -11,6 +11,6 @@ addons:
     project:
       name: "sadish-vz/MyWebJavaApp"
     notification_email: sadishkumar.x.neelamegam@verizon.com
-    build_command:   "ant test"
+    build_command:   "make"
     branch_pattern: master
 
