@@ -15,6 +15,9 @@
 	<property name="test.src.dir" value="test" />
 	<property name="web.dir" value="${basedir}/WebContent/WEB-INF" />
 	
+	<property name="src" value="src" />
+	<property name="build" value="build" />
+	
     <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
         <pathelement location="../../Downloads/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/annotations-api.jar"/>
         <pathelement location="../../Downloads/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/catalina-ant.jar"/>
@@ -57,7 +60,7 @@
         <path refid="lib/servlet-api.jar.libraryclasspath"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
-	<target name="test" depends="MyFirstTest" />
+	<target name="test" depends="clean,MyFirstTest" />
     <target name="init">
         <mkdir dir="bin"/>
     	<mkdir dir="target"/>
@@ -72,6 +75,13 @@
             </fileset>
         </copy>
     </target>
+	
+	<target name="compile">
+		    <javac srcdir="${src}" destdir="${build}" includeantruntime="false" source="${source}" executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes" target="${target}">
+		    	<classpath refid="MyWebJavaApp.classpath"/>
+		    		    </javac>
+		  </target>
+	
     <target name="clean">
         <delete dir="bin"/>
     </target>
