@@ -106,7 +106,9 @@
     	  		 <pathelement location="${test.build.dir}"/>
     	  			        </classpath>
     	  	 <formatter type="brief" usefile="false" />
-    	  	<test name="helloWorld.MyFirstTest" todir="${test.src.dir}"/>
+    	  	<batchtest>
+    	  	            <fileset dir="${test.src.dir}" includes="**/*Test*.java" />
+    	  	        </batchtest>
         </junit>
     	<echo message="Testing Done" />
     </target>
