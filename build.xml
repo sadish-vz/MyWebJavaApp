@@ -74,14 +74,16 @@
     </target>
     <target name="clean">
         <delete dir="bin"/>
+    	<delete dir="${build}/main"/>
+		<delete dir="${build}/test"/>
     </target>
     <target depends="clean" name="cleanall"/>
-	<target name="compile" depends="init">
-	    <javac srcdir="${src}" destdir="${build}/main"/>
-	    <javac srcdir="${test.src.dir}" destdir="${build}/test">
-	      <classpath>
-	  <pathelement location="${junit.output.dir}"/>
-	      </classpath>
+	<target name="compile" depends="clean,init">
+	    <javac srcdir="${src}" destdir="${build}/main"  executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes">
+	    	<classpath refid="MyWebJavaApp.classpath"/>
+	    		    </javac>
+	    <javac srcdir="${test.src.dir}" destdir="${build}/test"  executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes">
+	    	<classpath refid="MyWebJavaApp.classpath"/>
 	    </javac>
 	  </target>
     <target depends="build-subprojects,build-project,buildwar" name="build"/>
