@@ -101,8 +101,8 @@
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac destdir="bin" includeantruntime="false">
-        	<!--javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes" target="${target}">-->
+        <!--<javac destdir="bin" includeantruntime="false">-->
+        	<javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="src"/>
             <src path="test"/>
             <classpath refid="MyWebJavaApp.classpath"/>
