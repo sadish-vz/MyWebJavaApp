@@ -11,13 +11,9 @@
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
-    <property name="main.build.dir" value="build/main" /> 
 	<property name="test.build.dir" value="build/test" />
 	<property name="test.src.dir" value="test" />
 	<property name="web.dir" value="${basedir}/WebContent/WEB-INF" />
-	
-	<property name="main.src.dir" value=" src/itsfor/testing" />
-	<property name="build" value="build" />
 	
     <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
         <pathelement location="../../Downloads/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/annotations-api.jar"/>
@@ -42,7 +38,6 @@
         <pathelement location="../../Downloads/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/tomcat7-websocket.jar"/>
         <pathelement location="../../Downloads/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/websocket-api.jar"/>
     </path>
-    <path id="classpath.base" />
     <path id="Web App Libraries.libraryclasspath"/>
     <path id="EAR Libraries.libraryclasspath"/>
     <path id="lib/javax.servlet-3.0.jar.libraryclasspath"/>
@@ -62,7 +57,7 @@
         <path refid="lib/servlet-api.jar.libraryclasspath"/>
         <path refid="JUnit 4.libraryclasspath"/>
     </path>
-	<target name="test" depends="clean,MyFirstTest" />
+	<target name="test" depends="MyFirstTest" />
     <target name="init">
         <mkdir dir="bin"/>
     	<mkdir dir="target"/>
@@ -77,21 +72,6 @@
             </fileset>
         </copy>
     </target>
-	
-	<!--<target name="compile">
-	 <mkdir dir="${main.build.dir}"/>
-		    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
-            <classpath refid="MyWebJavaApp.classpath"/>
-        </javac>
-		  </target>-->
-		  
-		 <!-- <target name="compilation">
-		    <mkdir dir="${main.build.dir}"/>
-		    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
-		      <classpath refid="classpath.base"/>
-		    </javac>
-		  </target>-->
-	
     <target name="clean">
         <delete dir="bin"/>
     </target>
@@ -100,8 +80,7 @@
     <target name="build-subprojects"/>
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
-        <!--<javac destdir="bin" includeantruntime="false">-->
-        	<javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}" executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes">
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes" target="${target}">
             <src path="src"/>
             <src path="test"/>
             <classpath refid="MyWebJavaApp.classpath"/>
