@@ -78,13 +78,12 @@
         </copy>
     </target>
 	
-	<target name="compile">
+	<!--<target name="compile">
 	 <mkdir dir="${main.build.dir}"/>
 		    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
-			<!--<classpath refid="classpath.base"/>-->
             <classpath refid="MyWebJavaApp.classpath"/>
         </javac>
-		  </target>
+		  </target>-->
 		  
 		 <!-- <target name="compilation">
 		    <mkdir dir="${main.build.dir}"/>
