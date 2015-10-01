@@ -41,6 +41,7 @@
         <pathelement location="../../Downloads/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/tomcat7-websocket.jar"/>
         <pathelement location="../../Downloads/apache-tomcat-7.0.64-windows-x64/apache-tomcat-7.0.64/lib/websocket-api.jar"/>
     </path>
+    <path id="classpath.base" />
     <path id="Web App Libraries.libraryclasspath"/>
     <path id="EAR Libraries.libraryclasspath"/>
     <path id="lib/javax.servlet-3.0.jar.libraryclasspath"/>
