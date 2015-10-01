@@ -62,8 +62,8 @@
     </path>
 	<target name="test" depends="clean,MyFirstTest" />
     <target name="init">
-        <mkdir dir="bin"/>
-    	<mkdir dir="target"/>
+        <!--<mkdir dir="bin"/>
+    	<mkdir dir="target"/>-->
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
                 <exclude name="**/*.java"/>
@@ -77,6 +77,8 @@
     </target>
 	
 	<target name="compile">
+		<mkdir dir="bin"/>
+    	<mkdir dir="target"/>
 		   <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes" target="${target}">
             <src path="src"/>
             <src path="test"/>
