@@ -79,7 +79,8 @@
 	<target name="compile">
 		<mkdir dir="bin"/>
 		<javac srcdir="src" destdir="bin" includeantruntime="false">
-            <classpath refid="MyWebJavaApp.classpath"/>
+            <!--<classpath refid="MyWebJavaApp.classpath"/>-->
+            <classpath refid="classpath.base"/>
         </javac>
 		  </target>
 		  
