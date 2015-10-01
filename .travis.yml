@@ -2,14 +2,3 @@ language: java
 jdk: 
 - oraclejdk7 
 - openjdk7
-env:
-  global:
-   - secure: "AFWWMGNlc+vHFa+l3Q6Km7xN0aREXUVPtoPC55q6cYvl7XK3DRx+8zYr7DoHfzIGXAAnQtLxYKp0iZ6gsKZTIVzz39TfeeMUniLhqJJAjL0I40gVAIVbKwk9TLRIWMzCGfJmnsGjPTk4eHporbo/8spk01MAwCeVPFEYhaSjHqPKVTcmlPEycr6YBMZ7L8R+l9nDdiPv9dVL9Q0hXuPLzEZ3Y3W17FBM088BTLlXe5XQBu57wYfqcRr0IYOFw9VlaVeAErWWcvecEi+GWvjsGaLnJDxScObdxF/f8NI0NeJoeIEYXvJFitV8vXwkuKblXJHqO9AYakQ6Kj5BJ74ja796RiZfgTU5AQXcm7dug+XhZ9UM+izBJSUs73GOgc58Fl2I0P4FT9UqueAMq5obFijlQAngq2LG61WS1hCAJRBRWr8O22Ns+fXyQZ61rdn7y3Iiq4VIMTBFfBzc5M29Ac3dhQs4s5F20tuS82cxXTEzAVMsQBuD8J10HNy6EqAUBsChtrfopu0x+Ja0+gGrTWsNrkvLOFCpHTTiJEdfnDKY/4niYRBFusS4koYIoZYaNwYRPyv4hfsoPQJU1hEAzhpf3DNtW3lNGgiJCu42ULk5q8H/UnWrLwpfzXUigCqeEBIgFeRQoV8xDQni4Ccxp7k03rO7HDlGLSTwM4K8iwk="
-
-addons:
-  coverity_scan:
-    project:
-      name: "sadish-vz/MyWebJavaApp"
-    notification_email: sadishkumar.x.neelamegam@verizon.com
-    build_command:   "ant compile" 
-    branch_pattern: master
