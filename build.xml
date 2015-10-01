@@ -77,10 +77,19 @@
     </target>
 	
 	<target name="compile">
-		    <javac srcdir="${src}" destdir="${build}" includeantruntime="false" source="${source}" executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes" target="${target}">
-		    	<classpath refid="MyWebJavaApp.classpath"/>
-		    		    </javac>
+		   <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" executable="C:\Program Files\Java\jdk1.7.0_79\bin\javac" fork="yes" target="${target}">
+            <src path="src"/>
+            <src path="test"/>
+            <classpath refid="MyWebJavaApp.classpath"/>
+        </javac>
 		  </target>
+		  
+		 <!-- <target name="compilation">
+		    <mkdir dir="${main.build.dir}"/>
+		    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
+		      <classpath refid="classpath.base"/>
+		    </javac>
+		  </target>-->
 	
     <target name="clean">
         <delete dir="bin"/>
