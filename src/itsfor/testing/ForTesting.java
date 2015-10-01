@@ -4,6 +4,10 @@ public class ForTesting {
 
 	public String sayHello()
 	{
-return "Hello World";		
+		String str = "Hello World";
+		if(str.equals("Hello World"))
+			return str;
+		else
+			return "Hello World";		
 	}
 }
