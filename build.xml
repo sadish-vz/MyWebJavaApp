@@ -11,11 +11,12 @@
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
+    <property name="main.build.dir" value="build/main" /> 
 	<property name="test.build.dir" value="build/test" />
 	<property name="test.src.dir" value="test" />
 	<property name="web.dir" value="${basedir}/WebContent/WEB-INF" />
 	
-	<property name="src" value="src" />
+	<property name="main.src.dir" value="src" />
 	<property name="build" value="build" />
 	
     <path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
@@ -78,10 +79,11 @@
     </target>
 	
 	<target name="compile">
-		<mkdir dir="bin"/>
-		<javac srcdir="src" destdir="bin" includeantruntime="false">
-            <!--<classpath refid="MyWebJavaApp.classpath"/>-->
-            <classpath refid="classpath.base"/>
+	 <mkdir dir="${main.build.dir}"/>
+		    <javac srcdir="${main.src.dir}" destdir="${main.build.dir}" includeantruntime="false">
+			<classpath refid="classpath.base"/>
+            <classpath refid="MyWebJavaApp.classpath"/>
+            
         </javac>
 		  </target>
 		  
