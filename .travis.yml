@@ -19,3 +19,11 @@ addons:
     notification_email: sadishkumar.x.neelamegam@verizon.com
     build_command:   "ant compile" 
     branch_pattern: master
+deploy:
+   edge: true
+   provider: cloudfoundry
+   username: shravanthi.srinivasan@one.verizon.com
+   password: Chenrai15@
+   api: https://api.run.pivotal.io
+   organization: Cloudians
+   space: development
