@@ -8,7 +8,7 @@
 </head>
 <body bgcolor=white>
 
-    <table border="0" cellpadding="10">
+    <table border="0" cellpadding="11">
       <tr>
         <td>
           <img src="springsource.png">
