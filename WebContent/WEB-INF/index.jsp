@@ -4,15 +4,29 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Simple Web application</title>
 </head>
-<body>
-<h1>Welcome to JSP</h1>
+<body bgcolor=white>
 
-<hr/>
+    <table border="0" cellpadding="10">
+      <tr>
+        <td>
+          <img src="springsource.png">
+        </td>
+        <td>
+          <h1>Web Application</h1>
+        </td>
+      </tr>
+    </table>
 
+    <p>This is the home page for the HelloWorld Web application. </p>
+    <p>To prove that they work, you can execute either of the following links:
+    <ul>
+      <li>To a <a href="hello.jsp">JSP page</a>.
+      <li>To a <a href="hello">servlet</a>.
+    </ul>
 <form action="MyServlet">
 <input type="submit" value="Send" />
 </form>
-</body>
+  </body>
 </html>
