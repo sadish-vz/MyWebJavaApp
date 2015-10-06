@@ -27,3 +27,4 @@ deploy:
    api: https://api.run.pivotal.io
    organization: Cloudians
    space: development
+   name: MyWebJavaApp
