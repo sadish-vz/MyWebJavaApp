@@ -11,7 +11,7 @@
     <table border="0" cellpadding="11">
       <tr>
         <td>
-          <img src="springsource.png">
+          <img src="Chat.png">
         </td>
         <td>
           <h1>Web Application</h1>
